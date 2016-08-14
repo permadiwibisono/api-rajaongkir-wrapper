@@ -12,7 +12,7 @@ header('Content-type: application/json');
 //echo __ROOT__;
 $_request=$_SERVER['REQUEST_URI'];
 $_method=$_SERVER['REQUEST_METHOD'];
-$_key='0f89cac1a365b19d9232df468d89fd48';
+$_key='your key api';
 $_apiUrl="http://api.rajaongkir.com/starter";
 $_pathController=__ROOT__. '\\controller\\';
 $_getController=($_GET)?$_GET['controller']:null;
