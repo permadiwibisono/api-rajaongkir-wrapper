@@ -1,8 +1,9 @@
 <?php
 ini_set('display_errors',1);
+define('DS', DIRECTORY_SEPARATOR);
 error_reporting(E_ALL);
 define('__ROOT__', dirname(__FILE__)); 
-require_once(__ROOT__. '\model\ResultWrapper.php');
+require_once(__ROOT__.DS.'model'.DS.'ResultWrapper.php');
 header("Access-Control-Allow-Origin: *");
 header('Content-type: application/json');
 //https://www.cheatography.com/davechild/cheat-sheets/mod-rewrite/
@@ -12,9 +13,9 @@ header('Content-type: application/json');
 //echo __ROOT__;
 $_request=$_SERVER['REQUEST_URI'];
 $_method=$_SERVER['REQUEST_METHOD'];
-$_key='your key api';
-$_apiUrl="http://api.rajaongkir.com/starter";
-$_pathController=__ROOT__. '\\controller\\';
+$_key='add your key';
+$_apiUrl="https://api.rajaongkir.com/starter";
+$_pathController=__ROOT__.DS.'controller'.DS;
 $_getController=($_GET)?$_GET['controller']:null;
 $controller;
 if(isset($_getController)){

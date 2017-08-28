@@ -1,8 +1,8 @@
 <?php
 	//require_once('\model\ResultWrapper.php');
-	require_once(__ROOT__.'\model\City.php');
-	require_once(__ROOT__.'\model\Province.php');
-	require_once(__ROOT__.'\controller\AbstractAPI.php');
+	require_once(__ROOT__.DS.'model'.DS.'City.php');
+	require_once(__ROOT__.DS.'model'.DS.'Province.php');
+	require_once(__ROOT__.DS.'controller'.DS.'AbstractAPI.php');
 class cityController extends AbstractAPI{
     private $urlApi='';
     //private $result;
@@ -13,7 +13,7 @@ class cityController extends AbstractAPI{
     	{
     		case "GET":$result=$this->Get();break;
     		default:{
-    			$result=$this->_response(500);
+    			$result=$this->_response(500,'Method Not Allowed!');
     		} break;
     	}
     	return $result;

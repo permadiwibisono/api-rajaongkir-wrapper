@@ -1,6 +1,6 @@
 <?php
-	require_once(__ROOT__.'\model\Province.php');
-	require_once(__ROOT__.'\controller\AbstractAPI.php');
+	require_once(__ROOT__.DS.'model'.DS.'Province.php');
+	require_once(__ROOT__.DS.'controller'.DS.'AbstractAPI.php');
 class provinceController extends AbstractAPI
 {
     private $urlApi='';
@@ -12,7 +12,7 @@ class provinceController extends AbstractAPI
     	{
     		case "GET":$result=$this->Get();break;
     		default:{
-    			$result=$this->_response(500);
+    			$result=$this->_response(500,'Method Not Allowed!');
     		} break;
 
     	}
